@@ -1,0 +1,55 @@
+* {
+	font-family: "Verdana";
+}
+	
+#myName {
+	font-size: 230%;
+	font-weight: bold;
+}
+
+#topInfo { 
+	font-size: 100%;
+}
+
+#objective {	
+	line-height: 115%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.tables {
+	
+}
+
+.title {
+	font-size: 130%;		
+	font-weight: bold;
+	text-decoration: underline;
+	padding: 0;
+	margin: 0;
+}
+
+.lists {
+	padding-top: 0;
+	margin: 0;
+}
+
+.lines { 
+	border-color: blue;
+}
+
+.roles { 
+	font-weight: bold;
+}
+
+.dates { 
+	padding-left: 50px;
+}
+
+.lists { 
+	margin: 0;
+}
+
+#bold { 
+	font-weight: bold;
+}
