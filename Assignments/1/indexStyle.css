@@ -1,0 +1,93 @@
+body {
+	background: url('grass.jpg');
+	background-size: 800px 850px;
+}
+
+#tabTable { 
+	margin-left: 475px;
+}
+
+.tabs {
+	padding-right: 50px;
+	font-size: 17px;
+	color: red;
+}
+
+h1 {
+	margin-left: 300px;
+	color: darkblue;
+}
+
+img {
+	position: absolute;
+	margin-left: 495px;
+	margin-top: 40px;
+	transform: rotate(90deg);
+	height: 205px;
+}
+
+p { 
+	font-weight: bold;
+	color: black;
+}
+
+#linkTable {
+	background-color:rgba(255, 0, 0, 0.4);;	
+}
+
+#movies {
+	position: absolute;
+	margin-top: 20px; 
+	padding-left: 150px;
+	background-color: rgb(25, 0, 255, .4);
+	max-height: 200px;
+	color: white;
+}
+
+#shows { 
+	position: relative;
+	margin-left: 420px;
+	background-color: rgba(255, 0, 221, 0.4);
+	padding-bottom: 4px;
+	color: white;
+}
+
+#favShow {
+	padding-top: 20px;
+}
+
+#links { 
+	color: yellow;
+}
+
+#otherLinks { 
+	position: absolute;
+	top: 420px;
+	left: 450px;
+}
+
+#otherHeader {
+	margin: 0;
+}
+
+.otherLink {
+	color: blue;
+	font-size: 18px;
+}
+
+#quoteBox {
+	background-color: rgb(76, 160, 163, .4);
+}
+
+#quote {
+	color: white;
+}
+
+#span {
+	color:red;
+	background-color: gold;
+}
+
+a:hover { 
+	color: black;
+}
