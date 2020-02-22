@@ -28,11 +28,27 @@ img {
 
 p { 
 	font-weight: bold;
+	color: purple;
+}
+
+#linkTableArea {
+	background-color: rgba(255, 0, 0, 0.4);
+	width: 790px;	
+}
+
+#linkTable { 
+	color: yellow;
+}
+
+td > a {
+	font-weight: bold;
 	color: black;
 }
 
-#linkTable {
-	background-color:rgba(255, 0, 0, 0.4);;	
+#otherLinks { 
+	position: absolute;
+	top: 420px;
+	left: 450px;
 }
 
 #movies {
@@ -47,6 +63,7 @@ p {
 #shows { 
 	position: relative;
 	margin-left: 420px;
+	width: 370px;
 	background-color: rgba(255, 0, 221, 0.4);
 	padding-bottom: 4px;
 	color: white;
@@ -54,16 +71,6 @@ p {
 
 #favShow {
 	padding-top: 20px;
-}
-
-#links { 
-	color: yellow;
-}
-
-#otherLinks { 
-	position: absolute;
-	top: 420px;
-	left: 450px;
 }
 
 #otherHeader {
@@ -77,6 +84,7 @@ p {
 
 #quoteBox {
 	background-color: rgb(76, 160, 163, .4);
+	width: 790px;
 }
 
 #quote {
