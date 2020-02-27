@@ -28,7 +28,7 @@ img {
 
 p { 
 	font-weight: bold;
-	color: purple;
+	color: palevioletred;
 }
 
 #linkTableArea {
@@ -38,6 +38,7 @@ p {
 
 #linkTable { 
 	color: yellow;
+	font-weight: bold;
 }
 
 td > a {
