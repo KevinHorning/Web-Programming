@@ -9,5 +9,5 @@
         echo "Verification complete, no errors";
 
     echo "<br/>";
-    echo '<a href = "http://codd.cs.gsu.edu/~khorning2/Assignments/Assignment3/validate.php"> Go Back </a>';
+    echo '<a href = "http://codd.cs.gsu.edu/~khorning2/Assignments/Assignment3/validate.html"> Go Back </a>';
 ?>
