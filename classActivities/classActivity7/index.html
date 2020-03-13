@@ -1,0 +1,130 @@
+<script>
+
+    fib(15)
+    triangle()
+    list = [5, 1, 5, 7, 2, 3, 4]
+    sort2(list)
+    mostFrequent(list)
+    shuffle(list)
+
+    function fib(n){
+        document.write("Fibinocci series to " + n + " places: <br/> ")
+        if (n == 1)
+            return [0]
+        if (n == 2)
+            return [0,1]
+        var list = [0, 1]
+        for (var i = 2; i < n; i++){
+            list.push(list[i-1] + list[i - 2])
+        }
+        document.write(list)
+    }
+
+    function triangle(){
+        document.write("<br/><br/> Cool Triangle:")
+        for (var i = 1; i <= 6; i++){
+            for (var j = 1; j < i; j++)
+                document.write("* ")
+            document.write("<br/>")
+        }
+    }
+
+    function sort2(list){
+        document.write("<br/> List before sort: " + list)
+        document.write("<br/> List after sort: " + list.sort())
+    }   
+
+    function mostFrequent(list){
+        var dict = {}
+        for (var i = 0; i < list.length; i++){
+            if (list[i] in dict)
+                dict[list[i]]++
+            else
+                dict[list[i]] = 1
+        }
+        var maxKey = null
+        var maxValue = 0
+        for (const [key, value] of Object.entries(dict)){
+            if (value > maxValue){
+                maxKey = key
+                maxValue = value
+            }   
+        }
+        document.write("<br/><br/> Most frequent value for the same list: " + maxKey + " with " + maxValue + " occurances")
+    }
+
+    function shuffle(list){
+        var r, temp
+        for (var i = list.length - 1; i > 0; i--) {
+            r = Math.floor(Math.random() * (i + 1))
+            temp = list[i]
+            list[i] = list[r]
+            list[r] = temp
+        }
+        document.write("<br/><br/> List shuffled: " + list + "<br/></br>")
+    }
+
+    function loadText() {
+        var request = new XMLHttpRequest()
+        request.open("GET", "ajaxData.html")
+        request.onload = function() {
+            var data = request.responseText
+            addHTML(data)
+        }
+        request.send()     
+    }
+
+    function addHTML(data) {
+        var input = document.getElementById("form")
+        var IDdiv = document.getElementById("IDmessage")
+        var firstNameDiv = document.getElementById("firstNameMessage")
+        var lastNameDiv = document.getElementById("lastNameMessage")
+        lines = parseHTML(data)
+
+        if (form.elements[0].value == "")
+            IDdiv.innerHTML = lines[0]
+        else
+            IDdiv.innerHTML = ""
+
+        if (form.elements[1].value == "")
+            firstNameDiv.innerHTML = lines[1]
+        else
+            firstNameDiv.innerHTML = ""
+
+        
+        if (form.elements[2].value == "")
+            lastNameDiv.innerHTML = lines[2]
+        else 
+            lastNameDiv.innerHTML = "" 
+
+        if (form.elements[0].value == "" || form.elements[1].value == "" || form.elements[2].value == "")
+            alert("Input is Missing")
+    }
+
+    function parseHTML(data) {
+        var lines = []
+        var newLine = ""
+        for (var i = 0; i < data.length; i++){
+            if (data[i] == '\n'){
+                lines.push(newLine)
+                newLine = ""
+            }
+            else 
+                newLine += data[i]
+        }
+        if (newLine.length != 0)
+            lines.push(newLine)
+        return lines
+    }
+    
+</script>
+
+<form name = "form" onsubmit = "loadText(); return false">
+    <div id = "IDmessage"> </div>
+    ID: <input type = "text" name = "ID"> <br/>
+    <div id = "firstNameMessage"> </div>
+    FirstName: <input type = "text" name = "first"> <br/>
+    <div id = "lastNameMessage"> </div>
+    LastName: <input type = "text" name = "last"> <br/>
+    <input id = "sub" type = "submit" value = "Sumbit"> </input> <br/>
+</form>
