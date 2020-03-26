@@ -1,0 +1,33 @@
+<script type="text/javascript" src = "gameEngine.js"> </script>
+
+<h2> <span id = "remaining"> 8 </span> 
+    guesses left to find the secret number: </h2>
+
+<body>
+    <form name = "form" id = "form" method = "POST" action = "game.html" 
+        onsubmit = "guessResponse(); return false;">
+        <input type = "text" name = "guessNum" id = "guessBox"
+            placeholder = "(Between 1 and 100)" pattern = "^[0-9]+$" 
+            required autofocus> <br><br>
+        <input type = "submit" value = "Guess">
+    </form>
+
+    <h2 id = "hint">  </h2>
+    <h1 id = "newGame">  </h1>
+
+    <a href = "http://codd.cs.gsu.edu/~khorning2/Assignments/Assignment4/index.html"> Link to index </a>
+</body>
+
+<style>
+    body {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    h1 {
+        color: red;
+        font-size: 40px;
+    }
+</style>

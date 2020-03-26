@@ -1,0 +1,50 @@
+<script type="text/javascript" src = "memorizeEngine.js"> </script>
+
+<body>
+    <h1> Memorization Game: </h1>
+    <form name = "settings" id = "settings" action = "memorize.html"
+        method = "POST" onsubmit = "createGame(); return false">
+        <h3> Choose the number of photo pairs: </h3>
+        <input type = "radio" name = "pairs" value = "8" checked> 8 Pairs 
+        <input type = "radio" name = "pairs" value = "10"> 10 Pairs
+        <input type = "radio" name = "pairs" value =  "12"> 12 Pairs <br>
+
+        <h3> Choose difficulty: </h3>
+        <input type = "radio" name = "dif" value = "8" checked> Easy
+        <input type = "radio" name = "dif" value = "5"> Medium
+        <input type = "radio" name = "dif" value = "3"> Hard <br><br>
+
+        <input type = "submit" value = "Start">
+    </form>
+
+    <table name = "table" id = "table"> </table>
+
+    <br><br>
+    <a href = "http://codd.cs.gsu.edu/~khorning2/Assignments/Assignment4/index.html"> Link to index </a>
+</body>
+
+<style>
+    body {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    table { 
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    h3 {
+        display: inline-block;
+        margin-bottom: -15px;
+    }
+
+    img {
+        height: 180px;
+        width: 180px;
+    }
+</style>

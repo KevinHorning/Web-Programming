@@ -1,0 +1,50 @@
+<body>
+
+    <h2> Enter the employees' hours one at a time: </h2>
+    <h4> (Enter a negative number to terminate) </h4>
+
+    <script type="text/javascript" src = "processing.js"> </script>
+
+    <form name = "hourInput" id = "hourInput" method = "POST" 
+        action = "payroll.html" onsubmit = "addHour(); return false">
+        <input type = "text" name = "hours" pattern = "-?[0-9]{1,2}"
+            placeholder = "Number of hours worked" required autofocus>
+        <input type = "submit" value = "Enter">
+    </form>
+
+    <br><br>
+    <table id = "table">
+        <tr>
+            <td> Employee ID</td>
+            <td> Hours Worked</td>
+            <td> Payment </td>
+        </tr>
+    </table>
+    <p id = "totalPay"> Combined Pay: </p>
+
+    <br><br>
+    <a href = "http://codd.cs.gsu.edu/~khorning2/Assignments/Assignment4/index.html"> Link to index </a>
+</body>
+
+<style>
+    body {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    td {
+        padding-right: 20px;
+    }
+
+    h4 {
+        margin-top: -15px;
+        font-weight: normal;
+    }
+</style>
