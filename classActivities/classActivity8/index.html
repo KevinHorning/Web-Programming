@@ -1,0 +1,93 @@
+<link rel="stylesheet" type="text/css" href="indexStyle.css">
+<br>
+<body>
+<div align="center">
+    <h1>MySQL PRACTICE:</h1>
+    <p> QUERY TO CREATE PRODUCT TABLE: </p>
+    <h1> CREATE TABLE Products(
+            ProductID INT auto_increment NOT NULL,
+            ProductName VARCHAR(40) NOT NULL,
+            SupplierID INT(11),
+            CategoryID INT(11),
+            QuantityPerUnit VARCHAR(20),
+            UnitPrice DECIMAL(10,4),
+            UnitsInStock SMALLINT(2),
+            UnitsOnOrder SMALLINT(2),
+            ReorderLevel SMALLINT(2),
+            Discontinued BIT(1),
+            PRIMARY KEY (ProductID)
+            ); </h1>
+    <h2> Create Product Table Screenshot: </h2>
+    <img src= "screenshots/img1.png">
+<br><br>
+
+    <p> QUERY TO SHOW PRODUCT TABLE: </p>
+    <h1> DESCRIBE Products; </h1>
+    <h2> Product Table Screenshot: </h2>
+    <img src = "screenshots/img2.png">
+<br>
+
+    <p> QUERY TO GET PRODUCT NAME & QUANITTY/UNIT: </p>
+    <h1> INSERT INTO Products (`ProductID`, `ProductName`, `SupplierID`, `CategoryID`, `QuantityPerUnit`, `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`, `ReorderLevel`, `Discontinued`) VALUES(1, 'Chai', 1, 1, '10 boxes x 20 bags', '18.0000', 39, 0, 10,b'0'), ... </h1>
+    <h2> Product name and quantity/unit Query Result Screenshot:</h2>
+    <img src = "screenshots/img3.PNG">
+<br>
+
+    <p> QUERY TO GET CURRENT PRODUCT LIST </p>
+    <h1> SELECT ProductName, QuantityPerUnit FROM Products; </h1>
+    <h2> Product List Query Result Screenshot:</h2>
+    <img src = "screenshots/img4.PNG">
+<br>
+
+<br>
+    <p>Query to get discontinued Product list (Product ID and name):</p>
+    <h1> SELECT ProductID, ProductName FROM Products WHERE Discontinued = FALSE; </h1>
+    <h2> Discontinued Product List Query Result Screenshot:</h2>
+    <img src = "screenshots/img5.PNG">
+<br>
+    <p>Query to get most expensive 
+        <br>& least expensive Product list (name and unit price): </p>
+    <h1>SELECT ProductName, UnitPrice FROM Products ORDER BY UnitPrice;</h1>
+    <h1>SELECT ProductName, UnitPrice FROM Products ORDER BY UnitPrice desc;</h1>
+    <h2>Product List by Price Ascending Query Result Screenshot:</h2>
+    <img src = "screenshots/img6-1.PNG">
+    <br>
+    <h2>Product List by Price Descending Query Result Screenshot:</h2>
+    <img src = "screenshots/img6-2.PNG">
+
+    <p>Query to get Product list (id, name, unit price) where current  <br> products cost less than $20:</p>
+    <h1> SELECT ProductID, ProductName, UnitPrice FROM Products WHERE UnitPrice &lt; 20.0; </h1>
+    <h2>Product list &lt; $20 Query Screenshot:</h2>
+    <img src = "screenshots/img7.PNG">
+<br>
+    <p>Query to get Product list (id, name, unit price) where products cost between $15 and $25:</p>
+    <h1> SELECT ProductID, ProductName, UnitPrice FROM Products WHERE UnitPrice &lt; 25.0 AND UnitPrice &gt; 15.0; </h1>
+    <h2>Product list $15-$25 Query Screenshot:</h2>
+    <img src = "screenshots/img8.PNG">
+<br>
+    <p>Query to get Product list (name, unit price) of above average price: </p>
+    <h1> SELECT ProductName, UnitPrice FROM Products WHERE UnitPrice &gt; (SELECT AVG(UnitPrice) FROM Products); </h1>
+    <h2>Product list &gt; average price Query Screenshot: </h2>
+    <img src = "screenshots/img9.PNG">
+<br>
+    <p>Query to get Product list (name, unit price) of ten most expensive products. </p>
+    <h1>SELECT ProductName, UnitPrice FROM Products ORDER BY UnitPrice desc LIMIT 10; </h1>
+    <h2>Product list &gt; average price Query Screenshot: </h2>
+    <img src = "screenshots/img10.PNG">
+<br>
+    <p> Query to get count current and discontinued products: </p>
+    <h1> SELECT COUNT(ProductID) AS Discontinued FROM Products Where Discontinued = TRUE; </h1>
+    <h1> SELECT COUNT(ProductID) AS Active FROM Products Where Discontinued = FALSE; </h1>
+    <h2>Count active products Query Result Screenshot: </h2>
+    <img src = "screenshots/img11-1.PNG">
+    <h2>Count discontinued Products Query Result Screenshot: </h2>
+    <img src = "screenshots/img11-2.PNG">
+<br>
+    <p> Query to get Product list (name, units on order, units in stock) of stock is less than quantity on order: </p> 
+    <h1>SELECT ProductName, UnitsOnOrder, UnitsInStock FROM Products Where UnitsInStock &lt; UnitsOnOrder; </h1>
+    <h2>Product list &gt; average price Query Screenshot: </h2>
+    <img src = "screenshots/img12.PNG">
+
+</div>
+</body>
+<a href = "http://codd.cs.gsu.edu/~khorning2/index.html">Back to index</a>
