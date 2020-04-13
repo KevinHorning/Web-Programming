@@ -1,0 +1,135 @@
+<head>
+    <title> New Purchase </title>
+</head>    
+<body>
+    <div id="leftside">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+        </ul>
+    </div>
+    <div id="otherside">
+        <ul>
+            <li><a href="display.php">TABLE</a></li>
+            <li><a href="newPurchase.html">NEW PURCHASE</a></li>
+            <li><a href="query.html">SEARCH</a></li>
+            <li><a href="http://codd.cs.gsu.edu/~khorning2/index.html">INDEX</a></li>
+        </ul>
+    </div>
+    <br><br><br><br><br>
+
+    <h1> NEW PURCHASE </h1>
+    <div class="center">
+        <div class="row">
+            <div class="leftcolumn">
+                <form method="post">
+                    <div id = "labels">
+                        <p>Purchase Number:</p>
+                        <p>Supplier ID:</p>
+                        <p>Date:</p>
+                        <p>Quantity:</p>
+                        <p>Price:</p>
+                        <p>Description:</p>
+                    </div>
+                    <div id = "inputs">
+                        <input type = "text" name = "purchaseNo" id = "firstInput" size = "13" pattern = "P[0-9]{3}" placeholder = "P### (# is 0-9)" required>
+                        <br/>
+                        <input type = "text" name = "supplierID" size = "13" pattern = "S[0-9]{3}" placeholder="S### (# is 0-9)" required>
+                        <br/>
+                        <input type = "text" name = "date" size = "13" pattern = "[0-1][1-9]\/[0-3][0-9]\/[0-9]{2}" placeholder = "mm/dd/yy" required>
+                        <br/>
+                        <input type = "text" name = "quantity" size = "13" pattern = "[0-9]+" placeholder = "10" required>
+                        <br/>
+                        <input type = "text" name = "price" size = "13" pattern = "[0-9]+.[0-9]{2}" placeholder = "0.00" required>
+                        <br/>
+                        <input type = "text" name = "description" size = "40" maxlength = "40" placeholder = "purchase item details..." required>
+                        <br/>
+                        <input type = "submit" formaction = "update.php" value = "Add to Database">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id = "card"></div>
+</body>
+<style>
+    ul {
+        font-family: helvetica;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }  
+    li {
+        display: inline;
+        float: left;
+        font-family: helvetica;
+    }    
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: helvetica;
+    }
+    .center {
+        margin: auto;
+        width: 60%;
+        border: 3px #ffffff;
+        padding: 10px;
+    }
+    #leftside {
+        position: absolute;
+        left:20px;
+        top:10px;
+    }
+    #otherside {
+        float: right;
+        margin-top: 0px;
+        margin-right: 20px;
+    }
+    .rightcolumn {
+        float: left;
+        width: 100%;
+        background-color: #f1f1f1;
+        padding-left: 20px;
+        font-family: helvetica;
+    }
+    body {
+        font-family: helvetica;
+        padding: 10px;
+        background: #f1f1f1;
+    }
+    h1, a {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        clear: both;
+    }
+    #labels {
+        float: left;   
+        width: 47%;    
+        text-align: right;
+    }
+    #inputs {
+        float: right;
+        width: 52%;
+        align-self: left;
+    }
+    input, textarea {
+        margin: .5em;
+    }
+    #firstInput {
+        margin-top: 10px;
+    }
+    #card {
+        width: 40%;
+        height: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -100px;
+        padding-left: 20px;
+        background: white;
+    }
+ </style>

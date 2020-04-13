@@ -1,0 +1,52 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="indexstyle.css"> 
+<body>
+    <div id="leftside">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+        </ul>
+    </div>
+    <div id="otherside">
+        <ul>
+        <li><a href="display.php">TABLE</a></li>
+        <li><a href="newPurchase.html">NEW PURCHASE</a></li>
+        <li><a href="query.html">SEARCH</a></li>
+        <li><a href="http://codd.cs.gsu.edu/~khorning2/index.html">INDEX</a></li>
+        </ul>
+    </div>
+<br>
+<br>
+<br>
+    <div class="center">
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>SETTING UP THE TABLE</h2>
+            <h5>Part One, Screenshot and Query</h5>
+            <div class="fakeimg" style="height:200px;">
+                <img id ="screenshot" src="screenshot1.png">
+            </div>
+            <br>
+            <p>Query Used:</p>
+            <p>CREATE TABLE Purchases( 
+                PurchaseNo VARCHAR(4) NOT NULL,
+                SupplierID VARCHAR(4) NOT NULL,
+                Date VARCHAR(8) NOT NULL,
+                Quantity INT NOT NULL,
+                Description VARCHAR(40) NOT NULL,
+                Price DOUBLE NOT NULL,
+                PRIMARY KEY (PurchaseNo));</p>
+          </div>
+          <div class="card">
+            <h2>SETTING UP THE TABLE</h2>
+            <h5>Part Two, Screenshot and Query</h5>
+            <div class="fakeimg" style="height:200px;"><img src="screenshot2.png"></div>
+            <br>
+            <p>Query Used:</p>
+            <p>Insert Into Purchases VALUES ("P100", "S101", "01/03/10", 100, "T-shirts Blue XL", 4.52); 
+                Insert Into Purchases VALUES ("P101", "S102", "01/03/10", 30, "T-shirts Red L", 3.44);
+                ...</p>
+          </div>
+        </div>
+        
+</body>

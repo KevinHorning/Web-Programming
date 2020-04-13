@@ -1,0 +1,113 @@
+ul {
+    font-family: helvetica;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+li {
+    display: inline;
+    float: left;
+    font-family: helvetica;
+  }
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: helvetica;
+  }
+  .center {
+    margin: auto;
+    width: 60%;
+    border: 3px #ffffff;
+    padding: 10px;
+  }
+
+#leftside {
+    position: absolute;
+    left:20px;
+    top:10px;
+}
+#otherside {
+    float: right;
+    margin-top: 0px;
+    margin-right: 20px;
+}
+  
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 15px;
+  }
+
+.rightcolumn {
+    float: left;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+    font-family: helvetica;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    width: 100%;
+    padding: 20px;
+    margin:auto;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  }
+  h2 {
+      font-family: helvetica;
+      font-size: 20px
+  }
+  h5 {
+      font-family:helvetica;
+      font-size: 12px;
+      font-style:oblique;
+  }
+  p {
+      font-family: helvetica;
+      padding-left: 20px;
+      padding-top: 10px;
+  }
+  #screenshot {
+      align-content: center;
+      
+  }
+  body {
+    font-family: helvetica;
+    padding: 10px;
+    background: #f1f1f1;
+  }
+  img {
+      width: 800px;
+      height: 250px;
+      padding-bottom: 10px;
+      padding-top: 5px;
+  }

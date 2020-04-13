@@ -1,0 +1,115 @@
+<head>
+  <title> Search </title>
+</head>
+<style>
+  ul {
+    font-family: helvetica;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  li {
+    display: inline;
+    float: left;
+    font-family: helvetica;
+  }
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: helvetica;
+  }
+  .center {
+    margin: auto;
+    width: 60%;
+    border: 3px #ffffff;
+    padding: 10px;
+    
+  }
+  #leftside {
+    position: absolute;
+    left:20px;
+    top:10px;
+  }
+  #otherside {
+    float: right;
+    margin-top: 0px;
+    margin-right: 20px;
+  }
+  .rightcolumn {
+    float: left;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+    font-family: helvetica;
+  }
+  body {
+    font-family: helvetica;
+    padding: 10px;
+    background: #f1f1f1;
+  }
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 65px;
+    align-items: center;
+  }
+  h1 {
+    margin-top: 40px;
+    font-family: helvetica;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 45px;
+    font-family: helvetica;
+    font-style:italic;
+    font-size: 15px;
+  }
+  input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table, th, td {
+    border: 1px solid black;
+    align-items: center;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  } 
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+</style>
+<body>
+  <div id="leftside">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+    </ul>
+  </div>
+  <div id="otherside">
+    <ul>
+      <li><a href="display.php">TABLE</a></li>
+      <li><a href="newPurchase.html">NEW PURCHASE</a></li>
+      <li><a href="query.html">SEARCH</a></li>
+      <li><a href="http://codd.cs.gsu.edu/~khorning2/index.html">INDEX</a></li>
+    </ul>
+  </div>
+  <div class="center">
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h1>Purchase Search</h1>
+          <h2> Search by Supplier ID: </h2>
+                
+          <form method = "POST">
+            <input type = "text" name = "supplierID" size = "13" pattern = "S[0-9]{3}" placeholder="S### (# is 0-9)" required>
+            <br>
+            <input type = "submit" formaction = "query.php" value = "Search">
+          </form>
+        
